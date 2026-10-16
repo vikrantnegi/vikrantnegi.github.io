@@ -1,0 +1,7 @@
+[{"relation":["delegate_permission/common.handle_all_urls"],
+  "target":{"namespace":"android_app","package_name":"com.vikrantnegi.prioritynotify",
+    "sha256_cert_fingerprints":[
+      "79:66:EC:3E:87:99:6E:AC:73:D9:2C:20:4B:9E:9F:2E:ED:6C:5A:91:C7:28:9F:49:D9:E2:07:4A:6D:97:E9:67",
+      "57:48:06:90:32:9C:65:3D:56:11:8D:80:B7:A5:8B:F2:34:61:24:70:16:60:17:FA:13:25:7D:99:98:4B:A2:5F",
+      "85:39:32:08:D3:5A:BE:78:62:BE:CF:05:5C:01:FF:52:CF:98:1C:0A:2F:E7:1B:EE:A0:99:4E:55:5B:B3:74:E7",
+      "4B:7D:F2:E4:35:A3:33:F7:BD:17:72:B4:6D:96:34:95:E7:4A:15:3E:A8:A2:32:CF:12:31:D3:27:5F:8E:06:03"]}}]
