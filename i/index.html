@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Connect on Priority Notify</title>
+<meta name="description" content="Someone wants to connect with you on Priority Notify. The code works once and expires in 7 days.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/priority-notify-legal/style.css">
+<style>
+  .code { margin: 28px 0 0; padding: 18px 20px; background: var(--sf); border: 1px solid var(--ln); border-radius: 18px; }
+  .code b { display: block; font: 500 28px/1.2 'JetBrains Mono', ui-monospace, monospace; letter-spacing: .2em; }
+  .code small { display: block; margin-top: 6px; font: 400 11px/1 'JetBrains Mono', ui-monospace, monospace; letter-spacing: .12em; text-transform: uppercase; color: var(--mut); }
+  .btn { display: flex; align-items: center; justify-content: center; height: 56px; margin-top: 24px; border-radius: 28px; background: var(--ink); color: var(--bg); font-weight: 500; text-decoration: none; }
+  .note { color: var(--mut); font-size: 15px; }
+</style>
+</head>
+<body>
+<main>
+  <span class="brand"><span class="bars"><i></i><i></i><i></i><i></i></span>Priority Notify</span>
+  <p class="kicker">For Android</p>
+  <h1>Someone wants to connect with you.</h1>
+  <p class="lede">Install Priority Notify, then tap the link again. It opens straight in the app and connects you both ways.</p>
+  <div class="code" id="code" hidden><b></b><small>Works once · 7 days</small></div>
+  <a class="btn" href="https://play.google.com/apps/testing/com.vikrantnegi.prioritynotify">Get it on Google Play</a>
+  <p class="note" id="hint">Or type this code in the app under People → Add someone.</p>
+</main>
+<script>
+  // ponytail: fallback only. With the app installed, Android opens the app (verified App Link) and this page never shows.
+  var c = (new URLSearchParams(location.search).get('c') || '').toUpperCase();
+  if (/^[A-HJ-NP-Z2-9]{8}$/.test(c)) {
+    var el = document.getElementById('code');
+    el.querySelector('b').textContent = c;
+    el.hidden = false;
+  } else {
+    document.getElementById('hint').textContent = 'This link is incomplete. Ask them to share it again.';
+  }
+</script>
+</body>
+</html>
